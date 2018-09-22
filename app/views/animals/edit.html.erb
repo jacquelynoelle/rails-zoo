@@ -1,2 +1,1 @@
-<h1>Animals#edit</h1>
-<p>Find me in app/views/animals/edit.html.erb</p>
+<%= render partial: "form", locals: { form_title: "Update #{@animal.species}", form_sub: "Update details for the animal:", button_copy: "Update" } %>

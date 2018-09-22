@@ -1,2 +1,10 @@
-<h1>Animals#show</h1>
-<p>Find me in app/views/animals/show.html.erb</p>
+<h1>Animal Detail</h1>
+<h2><%= "#{@animal.name} the #{@animal.species}" %></h2>
+<p><%= "Age: #{@animal.age}" %></p>
+<%= image_tag @animal.image, alt: "#{@animal.species}" %>
+<p>
+  <ul>
+    <li><%= link_to "Edit", edit_animal_path, method: :get, class: "button" %></li>
+    <li><%= link_to "Delete", animal_path, method: :delete, class: "button" %></li>
+  </ul>
+</p>

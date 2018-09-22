@@ -1,2 +1,7 @@
-<h1>Animals#index</h1>
-<p>Find me in app/views/animals/index.html.erb</p>
+<h1>Animals in the Zoo</h1>
+<% @animals.each do |animal| %>
+  <article>
+    <%= link_to animal.species, animal_path(animal.id), method: :get %>
+    <%= link_to (image_tag animal.image, alt: "#{animal.species}"), animal_path(animal.id), method: :get %>
+  </article>
+<% end %>

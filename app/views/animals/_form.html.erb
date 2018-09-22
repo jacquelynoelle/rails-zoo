@@ -1,0 +1,21 @@
+<%= form_with model: @animal, class: "form" do |f| %>
+  <h1><%= form_title %></h1>
+  <p><%= form_sub %></p>
+  <p>
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :species, "Species:" %>
+    <%= f.text_field :species %>
+  </p>
+  <p>
+    <%= f.label :age, "Age:" %>
+    <%= f.text_field :age %>
+  </p>
+  <p>
+    <%= f.label :image, "Image URL:" %>
+    <%= f.text_field :image %>
+  </p>
+  <%= f.submit button_copy, class: "task-button" %>
+<% end %>
